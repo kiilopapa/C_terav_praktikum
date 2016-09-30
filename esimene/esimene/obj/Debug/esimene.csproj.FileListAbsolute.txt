@@ -1,0 +1,6 @@
+H:\C_terav\esimene\esimene\bin\Debug\esimene.exe.config
+H:\C_terav\esimene\esimene\bin\Debug\esimene.exe
+H:\C_terav\esimene\esimene\bin\Debug\esimene.pdb
+H:\C_terav\esimene\esimene\obj\Debug\esimene.csprojResolveAssemblyReference.cache
+H:\C_terav\esimene\esimene\obj\Debug\esimene.exe
+H:\C_terav\esimene\esimene\obj\Debug\esimene.pdb
