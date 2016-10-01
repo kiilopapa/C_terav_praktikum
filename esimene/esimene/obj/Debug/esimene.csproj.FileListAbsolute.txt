@@ -4,3 +4,9 @@ H:\C_terav\esimene\esimene\bin\Debug\esimene.pdb
 H:\C_terav\esimene\esimene\obj\Debug\esimene.csprojResolveAssemblyReference.cache
 H:\C_terav\esimene\esimene\obj\Debug\esimene.exe
 H:\C_terav\esimene\esimene\obj\Debug\esimene.pdb
+C:\Users\kristjan\Dropbox\ITcollege\C#\C_terav_praktikum\esimene\esimene\bin\Debug\esimene.exe.config
+C:\Users\kristjan\Dropbox\ITcollege\C#\C_terav_praktikum\esimene\esimene\obj\Debug\esimene.exe
+C:\Users\kristjan\Dropbox\ITcollege\C#\C_terav_praktikum\esimene\esimene\obj\Debug\esimene.pdb
+C:\Users\kristjan\Dropbox\ITcollege\C#\C_terav_praktikum\esimene\esimene\bin\Debug\esimene.exe
+C:\Users\kristjan\Dropbox\ITcollege\C#\C_terav_praktikum\esimene\esimene\bin\Debug\esimene.pdb
+C:\Users\kristjan\Dropbox\ITcollege\C#\C_terav_praktikum\esimene\esimene\obj\Debug\esimene.csprojResolveAssemblyReference.cache
