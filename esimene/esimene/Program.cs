@@ -13,7 +13,7 @@ namespace esimene
         {
 
 
-            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n0 - Välju");
+            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Auto");
 
             switch (tegevus)
             {
@@ -53,6 +53,22 @@ namespace esimene
                     string tagurpidi = pooraUmber(sisse);
                     Console.WriteLine(tagurpidi);
                     break;
+                case 7:
+                    int laius = kysiKasutajaltArv("Sisesta ristküliku laius: ");
+                    int pikkus = kysiKasutajaltArv("Sisesta risküliku pikkus: ");
+                    Ristkylik uusRistkylik = new Ristkylik(laius, pikkus);
+                    Console.WriteLine("Ristküliku pindala on : " + uusRistkylik.arvutaPindala());
+                    break;
+                case 8:
+                    int x = kysiKasutajaltArv("Sisesta x koordinaat: ");
+                    int y = kysiKasutajaltArv("Sisesta y koordinaat: ");
+                    Punkt punkt = new Punkt(x, y);
+                    Console.WriteLine("Kaugus nullist: " + punkt.kaugusNullist());
+                    Console.WriteLine(punkt.kasOnAlgusPunkt() ? "Punkt on koordinaatide alguspunkt. " : "Punkt ei ole koordinaatide alguspunkt");
+                    punkt.teataAndmed();
+                    Punkt p = new Punkt(3, 3);
+                    Console.WriteLine("Kaugus punktist p: " +punkt.kaugusTeisestPunnktist(p));
+                    break;
                 default:
                     break;
 
@@ -64,15 +80,6 @@ namespace esimene
             Console.ReadKey();
 
 
-            int laius = kysiKasutajaltArv("Sisesta ristküliku laius: ");
-            int pikkus = kysiKasutajaltArv("Sisesta risküliku pikkus: ");
-            Ristkylik uusRistkylik = new Ristkylik(laius, pikkus);
-
-            Console.WriteLine("Ristküliku pindala on : " + uusRistkylik.arvutaPindala());
-            
-
-
-            Console.ReadLine();
 
         }
 
