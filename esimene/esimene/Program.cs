@@ -13,7 +13,7 @@ namespace esimene
         {
 
 
-            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n0 - Välju");
+            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n0 - Välju");
 
             switch (tegevus)
             {
@@ -43,6 +43,16 @@ namespace esimene
                     bool kolmnurk = kasOnKolmmnurk(a1, a2, a3);
                     Console.WriteLine(kolmnurk ? "Tegemist on kolmnurgaga " : "Ei ole kolmnurk ");
                     break;
+                case 5:
+                    string sisend = kysiLause();
+                    int sonadeArv = mituSona(sisend);
+                    Console.WriteLine(sonadeArv);
+                    break;
+                case 6:
+                    string sisse = kysiLause();
+                    string tagurpidi = pooraUmber(sisse);
+                    Console.WriteLine(tagurpidi);
+                    break;
                 default:
                     break;
 
@@ -64,6 +74,40 @@ namespace esimene
 
             Console.ReadLine();
 
+        }
+
+        private static string pooraUmber(string sisse)
+        {
+            string tagurpidi = "";
+            for (int i = sisse.Length-1; i > -1; i--) {
+                tagurpidi = tagurpidi + sisse[i];
+            }
+            return tagurpidi;
+        }
+
+        private static string kysiLause()
+        {
+            Console.WriteLine("Kirjuta lause: ");
+            return Console.ReadLine();
+
+
+        }
+
+        private static int mituSona(string sisend)
+        {
+            string s = sisend.Trim();
+            if (s.Length < 1) return 0;
+            int count = 1;
+            for (int i = 0; i < sisend.Length; i++)
+            {
+                if (char.IsWhiteSpace(s[i]))
+                {
+                    count++;
+                }
+                i++;
+            }
+
+            return count;
         }
 
         private static bool kasOnKolmmnurk(int a1, int a2, int a3)
