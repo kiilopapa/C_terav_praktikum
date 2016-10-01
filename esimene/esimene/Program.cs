@@ -13,7 +13,7 @@ namespace esimene
         {
 
 
-            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Auto");
+            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Kompleksarv");
 
             switch (tegevus)
             {
@@ -68,6 +68,15 @@ namespace esimene
                     punkt.teataAndmed();
                     Punkt p = new Punkt(3, 3);
                     Console.WriteLine("Kaugus punktist p: " +punkt.kaugusTeisestPunnktist(p));
+                    break;
+                case 9:
+                    Kompleksarv a = new Kompleksarv(3, 4);
+                    Kompleksarv b = new Kompleksarv(2, 2);
+                    Kompleksarv c = Kompleksarv.liida(a, b);
+                    Console.WriteLine(c.reaal() + " i"+c.imaginaar());
+                    Kompleksarv d = Kompleksarv.lahuta(a, b);
+                    Console.WriteLine(d.reaal() + " i" + d.imaginaar());
+
                     break;
                 default:
                     break;
