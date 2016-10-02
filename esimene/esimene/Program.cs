@@ -11,13 +11,15 @@ namespace esimene
     {
         static void Main(string[] args)
         {
-
-
-            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Kompleksarv\n10 - Mootorsõiduk\n11 - Auto\n12 - veoauto");
+            bool v2lju = false;     
+            do
+            {           
+            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Kompleksarv\n10 - Mootorsõiduk\n11 - Auto\n12 - veoauto\n0 - Välju");
 
             switch (tegevus)
             {
                 case 0:
+                    v2lju = true;
                     break;
                 case 1:
                     String kysiFarenheit = "Sisesta temperatuur farenheiti skaala järgi";
@@ -114,14 +116,10 @@ namespace esimene
                     break;
 
             }
-            
-         
-
-
-            Console.ReadKey();
-
-
-
+                Console.WriteLine("\n\nVajuta suvalist nuppu, et jätkata.");
+                Console.ReadKey();
+                Console.WriteLine("\n\n");
+            } while (!v2lju);            
         }
 
         private static string pooraUmber(string sisse)
