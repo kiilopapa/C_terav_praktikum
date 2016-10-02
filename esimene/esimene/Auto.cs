@@ -12,6 +12,10 @@ namespace esimene
         public Auto() : base(100)
         {
         }
+
+        public Auto(int makskiirus) : base(makskiirus)
+        {
+        }
         public void avaUksed()
         {
             this.stop();
