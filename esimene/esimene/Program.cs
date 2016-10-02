@@ -13,7 +13,7 @@ namespace esimene
         {
 
 
-            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Kompleksarv\n10 - Mootorsõiduk");
+            int tegevus = kysiKasutajaltArv("Vali programm:\n\n1 - faren->kelvin \n2 - celsius->faren\n3 - täisealisese kontroll\n4 - kolmnurga kontroll\n5 - Sonade lugeja\n6 - tagurpidi\n7 - Ristkülik\n8 - Punkt\n9 - Kompleksarv\n10 - Mootorsõiduk\n11 - Auto");
 
             switch (tegevus)
             {
@@ -87,8 +87,18 @@ namespace esimene
                     Console.WriteLine(kiireSoiduk.ToString());
                     kiireSoiduk.stop();
                     Console.WriteLine(kiireSoiduk.ToString());
-
-
+                    break;
+                case 11:
+                    Auto auto = new Auto();
+                    Console.WriteLine(auto.ToString());
+                    auto.kiirenda(140);
+                    Console.WriteLine(auto.ToString());
+                    auto.avaUksed();
+                    Console.WriteLine(auto.ToString());
+                    auto.kiirenda(100);
+                    Console.WriteLine(auto.ToString());
+                    auto.sulgeUksed();
+                    Console.WriteLine(auto.ToString());
                     break;
                 default:
                     break;
